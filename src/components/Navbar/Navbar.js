@@ -4,22 +4,22 @@ import { useMediaQuery } from 'react-responsive'
 
 const DesktopWrapper = styled.div`
   padding: 3vh 10vw;
-  width: 80vw; 
+  width: 80vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 8vh;
-  background-color: #373737;
+  background-color: #FFFFFF;
 `
 
 const UltrawideWrapper = styled.div`
   padding: 3vh 20vw;
-  width: 60vw; 
+  width: 60vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 8vh;
-  background-color: #373737;
+  background-color: #FFFFFF;
 `
 
 const MobileWrapper = styled.div`
@@ -30,7 +30,7 @@ const MobileWrapper = styled.div`
   align-items: center;
   width: 84vw;
   height: 8vh;
-  background-color: #373737;
+  background-color: #FFFFFF;
 `
 
 const StyledLinks = styled.ul`
@@ -44,14 +44,15 @@ const StyledLinks = styled.ul`
 
 const StyledLink = styled.li`
   list-style: none;
-  color: #ffff;
-  font-size: 0.7rem;
+  color:  #373737;
+  font-size: 1.3rem;
   margin-left: 3vw;
   font-family: 'Nunito', sans-serif;
-  transition: all 0.5s;
+  transition: all 0.1s;
   cursor: pointer;
   &:hover{
     transition: all 0.5s;
+    color: #3000FF;
     -webkit-box-shadow: 0px 3px 0px 0px rgba(95,58,255,1);
     -moz-box-shadow: 0px 3px 0px 0px rgba(95,58,255,1);
     box-shadow: 0px 3px 0px 0px rgba(95,58,255,1);
@@ -69,28 +70,28 @@ const Navbar = () => {
     { maxWidth: 1600 }
   )
   const isMobile = useMediaQuery(
-    { maxWidth: 799 } 
+    { maxWidth: 799 }
   )
 
   // diagnosis logging
-  console.log(`isBigScreen: ${isBigScreen}`);
-  console.log(`isDesktopOrLaptop: ${isDesktopOrLaptop}`);
-  console.log(`isMobile: ${isMobile}`);
-  console.log((isBigScreen && !isDesktopOrLaptop && !isMobile));
-  console.log((isDesktopOrLaptop && !isBigScreen && !isMobile));
-  console.log((isMobile && !isDesktopOrLaptop && !isBigScreen));
+  // console.log(`isBigScreen: ${isBigScreen}`);
+  // console.log(`isDesktopOrLaptop: ${isDesktopOrLaptop}`);
+  // console.log(`isMobile: ${isMobile}`);
+  // console.log((isBigScreen && !isDesktopOrLaptop && !isMobile));
+  // console.log((isDesktopOrLaptop && !isBigScreen && !isMobile));
+  // console.log((isMobile && !isDesktopOrLaptop && !isBigScreen));
 
   const MobileNav = () => {
     return(
       <>
         <MobileWrapper>
-          <img src={require("../../images/logo-light.svg")} alt="logo" style={{
+          <img src={require("../../images/logo-dark.svg")} alt="logo" style={{
             height: "5rem",
             width: "5rem"
           }}>
 
           </img>
-          <img src={require("../../images/burger-light.svg")} alt="burgermenu" style={{
+          <img src={require("../../images/burger.svg")} alt="burgermenu" style={{
             height: "3rem",
             width: "3rem"
           }}>
@@ -105,19 +106,18 @@ const Navbar = () => {
     return(
       <>
         <DesktopWrapper>
-          <img src={require("../../images/logo-light.svg")} alt="logo"></img>
+          <img src={require("../../images/logo-dark.svg")} alt="logo" style={{
+            height: "8vh"
+          }}></img>
           <StyledLinks>
             <StyledLink>
-              Home
+              <strong>Home</strong>
             </StyledLink>
             <StyledLink>
-              About me 
+              <strong>Skills</strong>
             </StyledLink>
             <StyledLink>
-              Skills
-            </StyledLink>
-            <StyledLink>
-              Project
+              <strong>Projects</strong>
             </StyledLink>
           </StyledLinks>
         </DesktopWrapper>
@@ -129,19 +129,16 @@ const Navbar = () => {
     return(
       <>
         <UltrawideWrapper>
-          <img src={require("../../images/logo-light.svg")} alt="logo"></img>
+          <img src={require("../../images/logo-dark.svg")} alt="logo"></img>
           <StyledLinks>
             <StyledLink>
-              Home
+              <strong>Home</strong>
             </StyledLink>
             <StyledLink>
-              About me 
+              <strong>Skills</strong>
             </StyledLink>
             <StyledLink>
-              Skills
-            </StyledLink>
-            <StyledLink>
-              Project
+              <strong>Projects</strong>
             </StyledLink>
           </StyledLinks>
         </UltrawideWrapper>
