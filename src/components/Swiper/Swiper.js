@@ -3,19 +3,37 @@ import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
 import { useMediaQuery } from 'react-responsive'
 
-const SectionContainer = styled.div`
+const FirstSectionContainer = styled.div`
   background-image: url(${require("../../images/swiperlanding.svg")});
   background-repeat: no-repeat;
   background-position: center;
-  height: 85vh;
+  height: 80vh;
   object-fit: cover;
 `
+
+const SecondSectionContainer = styled.div`
+  background-image: url(${require("../../images/mobile-friendly-light.svg")});
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  object-fit: cover;
+`
+
+const ThirdSectionContainer = styled.div`
+  background-image: url(${require("../../images/github-desktop.svg")});
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  object-fit: cover;
+  cursor: pointer;
+`
+
 
 const MobileSectionContainer = styled.div`
   background-image: url(${require("../../images/mobile-landing.svg")});
   background-repeat: no-repeat;
   background-position: center;
-  height: 85vh;
+  height: 80vh;
   object-fit: cover;
 `
 
@@ -72,16 +90,18 @@ const DesktopSwiper = () => {
       <SwiperWrapper>
         <Swiper {...params}>
           <div>
-            <SectionContainer background="../../images/kristina-flour--VOQzKmWWq4-unsplash.jpg">
-            </SectionContainer>
+            <FirstSectionContainer background="../../images/kristina-flour--VOQzKmWWq4-unsplash.jpg">
+            </FirstSectionContainer>
           </div>
           <div>
-            <SectionContainer>
-            </SectionContainer>
+            <SecondSectionContainer>
+            </SecondSectionContainer>
           </div>
           <div>
-            <SectionContainer>
-            </SectionContainer>
+            <a href="https://github.com/sukibeww/react-portfolio">
+              <ThirdSectionContainer>
+              </ThirdSectionContainer>
+            </a>
           </div>
         </Swiper>
       </SwiperWrapper>
@@ -92,8 +112,8 @@ const DesktopSwiper = () => {
 const MySwiper = () =>{
   const isBigScreen = useMediaQuery(
     { minWidth: 1601 }
- )
- const isDesktopOrLaptop = useMediaQuery(
+  )
+  const isDesktopOrLaptop = useMediaQuery(
     { maxWidth: 1600 }
   )
   const isMobile = useMediaQuery(

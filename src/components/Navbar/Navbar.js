@@ -10,6 +10,10 @@ const DesktopWrapper = styled.div`
   justify-content: space-between;
   height: 8vh;
   background-color: #FFFFFF;
+  margin-bottom: 1vh;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
+  box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
 `
 
 const UltrawideWrapper = styled.div`
@@ -20,6 +24,10 @@ const UltrawideWrapper = styled.div`
   justify-content: space-between;
   height: 8vh;
   background-color: #FFFFFF;
+  margin-bottom: 1vh;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
+  box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
 `
 
 const MobileWrapper = styled.div`
@@ -29,8 +37,12 @@ const MobileWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 84vw;
-  height: 8vh;
+  height: 5vh;
   background-color: #FFFFFF;
+  margin-bottom: 2vh;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
+  box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
 `
 
 const StyledLinks = styled.ul`
@@ -62,9 +74,74 @@ const StyledLink = styled.li`
   }
 `
 
-const Navbar = () => { 
+const MobileNav = () => {
+  return(
+    <>
+      <MobileWrapper>
+        <img src={require("../../images/logo-dark.svg")} alt="logo" style={{
+          height: "3rem",
+          width: "3rem"
+        }}>
+
+        </img>
+        <img src={require("../../images/burger.svg")} alt="burgermenu" style={{
+          height: "2rem",
+          width: "2rem"
+        }}>
+
+        </img>
+      </MobileWrapper>
+    </>
+  )
+}
+
+const DesktopNav = () => {
+  return(
+    <>
+      <DesktopWrapper>
+        <img src={require("../../images/logo-dark.svg")} alt="logo" style={{
+          height: "8vh"
+        }}></img>
+        <StyledLinks>
+          <StyledLink>
+            <strong>Home</strong>
+          </StyledLink>
+          <StyledLink>
+            <strong>Skills</strong>
+          </StyledLink>
+          <StyledLink>
+            <strong>Projects</strong>
+          </StyledLink>
+        </StyledLinks>
+      </DesktopWrapper>
+    </>
+  )
+}
+
+const UltrawideNav = () => {
+  return(
+    <>
+      <UltrawideWrapper>
+        <img src={require("../../images/logo-dark.svg")} alt="logo"></img>
+        <StyledLinks>
+          <StyledLink>
+            <strong>Home</strong>
+          </StyledLink>
+          <StyledLink>
+            <strong>Skills</strong>
+          </StyledLink>
+          <StyledLink>
+            <strong>Projects</strong>
+          </StyledLink>
+        </StyledLinks>
+      </UltrawideWrapper>
+    </>
+  )
+}
+
+const Navbar = () => {
   const isBigScreen = useMediaQuery(
-    { minWidth: 1601 } 
+    { minWidth: 1601 }
  )
  const isDesktopOrLaptop = useMediaQuery(
     { maxWidth: 1600 }
@@ -72,7 +149,6 @@ const Navbar = () => {
   const isMobile = useMediaQuery(
     { maxWidth: 799 }
   )
-
   // diagnosis logging
   // console.log(`isBigScreen: ${isBigScreen}`);
   // console.log(`isDesktopOrLaptop: ${isDesktopOrLaptop}`);
@@ -80,71 +156,6 @@ const Navbar = () => {
   // console.log((isBigScreen && !isDesktopOrLaptop && !isMobile));
   // console.log((isDesktopOrLaptop && !isBigScreen && !isMobile));
   // console.log((isMobile && !isDesktopOrLaptop && !isBigScreen));
-
-  const MobileNav = () => {
-    return(
-      <>
-        <MobileWrapper>
-          <img src={require("../../images/logo-dark.svg")} alt="logo" style={{
-            height: "5rem",
-            width: "5rem"
-          }}>
-
-          </img>
-          <img src={require("../../images/burger.svg")} alt="burgermenu" style={{
-            height: "3rem",
-            width: "3rem"
-          }}>
-
-          </img>
-        </MobileWrapper>
-      </>
-    )
-  }
-
-  const DesktopNav = () => {
-    return(
-      <>
-        <DesktopWrapper>
-          <img src={require("../../images/logo-dark.svg")} alt="logo" style={{
-            height: "8vh"
-          }}></img>
-          <StyledLinks>
-            <StyledLink>
-              <strong>Home</strong>
-            </StyledLink>
-            <StyledLink>
-              <strong>Skills</strong>
-            </StyledLink>
-            <StyledLink>
-              <strong>Projects</strong>
-            </StyledLink>
-          </StyledLinks>
-        </DesktopWrapper>
-      </>
-    )
-  }
-
-  const UltrawideNav = () => {
-    return(
-      <>
-        <UltrawideWrapper>
-          <img src={require("../../images/logo-dark.svg")} alt="logo"></img>
-          <StyledLinks>
-            <StyledLink>
-              <strong>Home</strong>
-            </StyledLink>
-            <StyledLink>
-              <strong>Skills</strong>
-            </StyledLink>
-            <StyledLink>
-              <strong>Projects</strong>
-            </StyledLink>
-          </StyledLinks>
-        </UltrawideWrapper>
-      </>
-    )
-  }
   return(
     <>
       {(isBigScreen && !isDesktopOrLaptop && !isMobile) && <UltrawideNav/>}
