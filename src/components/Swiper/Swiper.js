@@ -3,31 +3,15 @@ import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
 import { useMediaQuery } from 'react-responsive'
 
-const FirstSectionContainer = styled.div`
-  background-image: url(${require("../../images/swiperlanding.svg")});
+const SectionContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   height: 80vh;
   object-fit: cover;
+  display: flex;
+  justify-content:center;
+  align-items: center;
 `
-
-const SecondSectionContainer = styled.div`
-  background-image: url(${require("../../images/mobile-friendly-light.svg")});
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 80vh;
-  object-fit: cover;
-`
-
-const ThirdSectionContainer = styled.div`
-  background-image: url(${require("../../images/github-desktop.svg")});
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 80vh;
-  object-fit: cover;
-  cursor: pointer;
-`
-
 
 const MobileSectionContainer = styled.div`
   background-image: url(${require("../../images/mobile-landing.svg")});
@@ -35,6 +19,9 @@ const MobileSectionContainer = styled.div`
   background-position: center;
   height: 80vh;
   object-fit: cover;
+  display: flex;
+  justify-content:center;
+  align-items: center;
 `
 
 const SwiperWrapper = styled.div`
@@ -58,14 +45,17 @@ const MobileSwiper = () =>{
         <Swiper {...params}>
           <div>
             <MobileSectionContainer>
+              <img src={require("../../images/mobile-landing.svg")} alt="landing"></img>
             </MobileSectionContainer>
           </div>
           <div>
             <MobileSectionContainer>
+              <img src={require("../../images/mobile-friendly-for-mobile.svg")} alt="landing"></img>
             </MobileSectionContainer>
           </div>
           <div>
             <MobileSectionContainer>
+              <img src={require("../../images/github-for-mobile.svg")} alt="landing"></img>
             </MobileSectionContainer>
           </div>
         </Swiper>
@@ -90,17 +80,20 @@ const DesktopSwiper = () => {
       <SwiperWrapper>
         <Swiper {...params}>
           <div>
-            <FirstSectionContainer background="../../images/kristina-flour--VOQzKmWWq4-unsplash.jpg">
-            </FirstSectionContainer>
+            <SectionContainer>
+              <img src={require("../../images/swiperlanding.svg")} alt="landing"></img>
+            </SectionContainer>
           </div>
           <div>
-            <SecondSectionContainer>
-            </SecondSectionContainer>
+            <SectionContainer>
+              <img src={require("../../images/mobile-friendly-light.svg")} alt="mobile-landing" ></img>
+            </SectionContainer>
           </div>
           <div>
             <a href="https://github.com/sukibeww/react-portfolio">
-              <ThirdSectionContainer>
-              </ThirdSectionContainer>
+              <SectionContainer>
+                <img src={require("../../images/github-desktop.svg")} alt="github-landing"></img>
+              </SectionContainer>
             </a>
           </div>
         </Swiper>
