@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import StyledLink from './StyledLink';
 import StyledLinks from './StyledLinks';
+import {Link} from 'react-router-dom';
 
 const UltrawideWrapper = styled.div`
   padding: 3vh 20vw;
@@ -24,13 +25,19 @@ const UltrawideNav = () => {
         <img src={require("../../images/logo-dark.svg")} alt="logo"></img>
         <StyledLinks>
           <StyledLink>
-            <strong>Home</strong>
+            <Link to="/">
+              <strong>Home</strong>
+            </Link>
           </StyledLink>
           <StyledLink>
-            <strong>Skills</strong>
+            <Link to="/projects">
+              <strong>Skills</strong>
+            </Link>
           </StyledLink>
           <StyledLink>
-            <strong>Projects</strong>
+            <Link to="/skills">
+              <strong>Projects</strong>
+            </Link>
           </StyledLink>
         </StyledLinks>
       </UltrawideWrapper>

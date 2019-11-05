@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import StyledLink from './StyledLink';
 import StyledLinks from './StyledLinks';
+import {Link} from 'react-router-dom'
 
 const DesktopWrapper = styled.div`
   padding: 3vh 10vw;
@@ -27,13 +28,19 @@ const DesktopNav = () => {
         }}></img>
         <StyledLinks>
           <StyledLink>
-            <strong>Home</strong>
+            <Link to="/">
+              <strong>Home</strong>
+            </Link>
           </StyledLink>
           <StyledLink>
-            <strong>Skills</strong>
+            <Link to="/projects">
+              <strong>Skills</strong>
+            </Link>
           </StyledLink>
           <StyledLink>
-            <strong>Projects</strong>
+            <Link to="/skills">
+              <strong>Projects</strong>
+            </Link>
           </StyledLink>
         </StyledLinks>
       </DesktopWrapper>

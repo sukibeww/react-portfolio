@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-// import { NavMode } from '../../contexts/navContext';
 import {useSpring , animated } from 'react-spring';
+import {Link} from 'react-router-dom';
 
 const MobileWrapper = styled.div`
   top: 0;
@@ -74,9 +74,15 @@ const MobileNav = () => {
         </img>
       </MobileWrapper>
       <animated.div style={fullNavAnimation}>
-        <NavOption>Home</NavOption>
-        <NavOption>Projects</NavOption>
-        <NavOption>Skills</NavOption>
+        <Link to="/">
+          <NavOption>Home</NavOption>
+        </Link>
+        <Link to="/projects">
+          <NavOption >Projects</NavOption>
+        </Link>
+        <Link to="/skills">
+          <NavOption>Skills</NavOption>
+        </Link>
       </animated.div>
     </>
   )

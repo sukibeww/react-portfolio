@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const StyledLink = styled.li`
   list-style: none;
-  color:  #373737;
   font-size: 1.3rem;
   margin-left: 3vw;
   font-family: 'Nunito', sans-serif;
@@ -17,6 +16,10 @@ const StyledLink = styled.li`
   }
   &:active{
     color: rgba(95,58,255,1);
+  }
+  a{
+    text-decoration: none;
+    color: #373737;
   }
 `
 
