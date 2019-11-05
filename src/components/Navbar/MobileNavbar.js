@@ -23,9 +23,9 @@ const MobileWrapper = styled.div`
 const NavOption = styled.div`
   height: 7vh;
   width: 50vw;
-  background-color: #5F3AFF;
-  color: #FFFFFF;
-  font-size: 1rem;
+  background-color: #FFFFFF;
+  color: #5F3AFF;
+  font-size: 1.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,10 +33,6 @@ const NavOption = styled.div`
   margin-top: 3vh;
   border: solid 3px #5F3AFF;
   transition: all 0.5s;
-  &:hover{
-    color: #5F3AFF;
-    background-color: #FFFFFF;
-  }
 `
 
 const MobileNav = () => {
@@ -58,12 +54,12 @@ const MobileNav = () => {
   return(
     <>
       <MobileWrapper>
-        <img src={require("../../images/logo-dark.svg")} alt="logo" style={{
-          height: "3rem",
-          width: "3rem"
-        }}>
-
-        </img>
+        <Link to="/">
+          <img src={require("../../images/logo-dark.svg")} alt="logo" style={{
+            height: "3rem",
+            width: "3rem"
+          }}></img>
+        </Link>
         <img src={require("../../images/burger.svg")} alt="burgermenu" style={{
           height: "2rem",
           width: "2rem",
@@ -73,15 +69,15 @@ const MobileNav = () => {
         >
         </img>
       </MobileWrapper>
-      <animated.div style={fullNavAnimation}>
-        <Link to="/">
-          <NavOption>Home</NavOption>
+      <animated.div style={fullNavAnimation} onClick={()=>toggle(!navMode)}>
+        <Link to="/" style={{textDecoration: "none"}}>
+          <NavOption onClick={()=>toggle(!navMode)}><strong>Home</strong></NavOption>
         </Link>
-        <Link to="/projects">
-          <NavOption >Projects</NavOption>
+        <Link to="/projects" style={{textDecoration: "none"}}>
+          <NavOption onClick={()=>toggle(!navMode)}><strong>Projects</strong></NavOption>
         </Link>
-        <Link to="/skills">
-          <NavOption>Skills</NavOption>
+        <Link to="/skills" style={{textDecoration: "none"}}>
+          <NavOption onClick={()=>toggle(!navMode)}><strong>Skills</strong></NavOption>
         </Link>
       </animated.div>
     </>
