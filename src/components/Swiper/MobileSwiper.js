@@ -6,7 +6,7 @@ const MobileSectionContainer = styled.div`
   background-image: url(${require("../../images/mobile-landing.svg")});
   background-repeat: no-repeat;
   background-position: center;
-  height: 80vh;
+  height: 90vh;
   object-fit: cover;
   display: flex;
   margin-top: 2vh;
