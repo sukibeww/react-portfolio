@@ -1,13 +1,22 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import HeroSection from './components/HeroSection/HeroSection'
-import NavModeProvider from './contexts/navContext';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 function App() {
   return (
     <>
-      <Navbar />
-      <HeroSection />
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact>
+            <HeroSection/>
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 }
