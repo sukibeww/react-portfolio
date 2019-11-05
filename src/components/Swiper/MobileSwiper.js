@@ -9,6 +9,7 @@ const MobileSectionContainer = styled.div`
   height: 80vh;
   object-fit: cover;
   display: flex;
+  margin-top: 2vh;
   justify-content:center;
   align-items: center;
 `
