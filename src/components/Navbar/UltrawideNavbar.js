@@ -23,7 +23,9 @@ const UltrawideNav = () => {
     <>
       <UltrawideWrapper>
         <Link to="/">
-          <img src={require("../../images/logo-dark.svg")} alt="logo"></img>
+          <img src={require("../../images/logo-dark.svg")} alt="logo" style={{
+            height: "8vh"
+          }}></img>
         </Link>
         <StyledLinks>
           <StyledLink>
