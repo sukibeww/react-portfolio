@@ -6,10 +6,8 @@ import NavModeProvider from './contexts/navContext';
 function App() {
   return (
     <>
-      <NavModeProvider>
-        <Navbar />
-        <HeroSection />
-      </NavModeProvider>
+      <Navbar />
+      <HeroSection />
     </>
   );
 }
