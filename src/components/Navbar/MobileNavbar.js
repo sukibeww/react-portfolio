@@ -20,21 +20,6 @@ const MobileWrapper = styled.div`
   box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
 `
 
-const NavOption = styled.div`
-  height: 7vh;
-  width: 50vw;
-  background-color: #FFFFFF;
-  color: #5F3AFF;
-  font-size: 1.3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  margin-top: 3vh;
-  border: solid 3px #5F3AFF;
-  transition: all 0.5s;
-`
-
 const MobileNav = () => {
   const [navMode, toggle] = useState(false)
   const fullNavAnimation = useSpring({
@@ -49,6 +34,21 @@ const MobileNav = () => {
     alignItems: "center",
     height: navMode ? "100vh" : "0vh",
     opacity: navMode ? 1 : 0
+  })
+
+  const navOptionAnimation = useSpring({
+    height: navMode ? "7vh" : "0vh",
+    display: navMode ? "flex" : "none",
+    width: "50vw",
+    backgroundColor: navMode ? "#FFFFFF" : "#373737",
+    color: "#5F3AFF",
+    fontSize: navMode? "1.3rem": "0rem",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: "10px",
+    marginTop: "3vh",
+    transition: "all 0.5s",
+    fontFamily: "Nunito, sans-serif"
   })
 
   return(
@@ -71,13 +71,16 @@ const MobileNav = () => {
       </MobileWrapper>
       <animated.div style={fullNavAnimation} onClick={()=>toggle(!navMode)}>
         <Link to="/" style={{textDecoration: "none"}}>
-          <NavOption onClick={()=>toggle(!navMode)}><strong>Home</strong></NavOption>
+          <animated.div style={navOptionAnimation} onClick={()=>toggle(!navMode)}><strong>Home</strong></animated.div>
+        </Link>
+        <Link to="/about-me" style={{textDecoration: "none"}}>
+          <animated.div style={navOptionAnimation} onClick={()=>toggle(!navMode)}><strong>About Me</strong></animated.div>
         </Link>
         <Link to="/projects" style={{textDecoration: "none"}}>
-          <NavOption onClick={()=>toggle(!navMode)}><strong>Projects</strong></NavOption>
+          <animated.div style={navOptionAnimation} onClick={()=>toggle(!navMode)}><strong>Projects</strong></animated.div>
         </Link>
         <Link to="/skills" style={{textDecoration: "none"}}>
-          <NavOption onClick={()=>toggle(!navMode)}><strong>Skills</strong></NavOption>
+          <animated.div style={navOptionAnimation} onClick={()=>toggle(!navMode)}><strong>Skills</strong></animated.div>
         </Link>
       </animated.div>
     </>
