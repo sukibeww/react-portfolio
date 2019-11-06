@@ -46,12 +46,6 @@ const AboutMeHeading = styled.h1`
   text-shadow: 0px 4px 4px  rgba(214,214,214,1);
 `
 
-const AboutMeFrame = styled.img`
-  position: absolute;
-  top: 15vh;
-  margin-top: 3vh;
-`
-
 const DesktopAboutMe = () =>{
   return(
     <>

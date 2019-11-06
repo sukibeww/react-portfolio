@@ -2,6 +2,7 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import DesktopAboutMe from './DesktopAboutMe';
 import MobileAboutMe from './MobileAboutMe';
+import LargeDeviceAboutMe from './LargeDeviceAboutMe';
 
 const AboutMe = () =>{
   const isBigScreen = useMediaQuery(
@@ -17,7 +18,7 @@ const AboutMe = () =>{
   return(
     <>
       {(isBigScreen && !isDesktopOrLaptop && !isMobile) && <DesktopAboutMe/>}
-      {(!isBigScreen && isDesktopOrLaptop && !isMobile) && <DesktopAboutMe/>}
+      {(!isBigScreen && isDesktopOrLaptop && !isMobile) && <LargeDeviceAboutMe/>}
       {(!isBigScreen && isDesktopOrLaptop && isMobile) && <MobileAboutMe/>}
     </>
   )
