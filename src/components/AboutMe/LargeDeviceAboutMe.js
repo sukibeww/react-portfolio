@@ -46,13 +46,17 @@ const AboutMeHeading = styled.h1`
   text-shadow: 0px 4px 4px  rgba(214,214,214,1);
 `
 
+const Emphasize = styled.span`
+  color: #5F3AFF;
+`
+
 const LargeDeviceAboutMe = () =>{
   return(
     <>
       <AboutMeWrapper>
         <AboutMeHeading>About me</AboutMeHeading>
         <AboutMeText>
-          Hi! My name is Suki, an aspiring web developer based in Melbourne, Australia. I build and design responsive and functioning web application. I'm finishing up my coding bootcamp soon and currently looking for an entry level web developer position to kickstart my career as a developer. If you want to work on an interesting project with me feel free to contact me and we can talk it over a cup of coffee <span role="img" aria-label="coffee">☕</span>.
+          Hi! My name is <Emphasize>Suki</Emphasize>, an aspiring web developer based in <Emphasize>Melbourne, Australia</Emphasize>. I build and design responsive and functioning web application. I'm finishing up my coding bootcamp soon and currently looking for an <Emphasize>entry level web developer</Emphasize> position to kickstart my career as a developer. If you have an interesting project and want to collaborate with me feel free to <Emphasize>contact me</Emphasize> and we can talk it over a cup of coffee <span role="img" aria-label="coffee">☕</span>.
         </AboutMeText>
         <AboutMeSVG src={require("../../images/about-me.svg")} alt="about-me"/>
       </AboutMeWrapper>
