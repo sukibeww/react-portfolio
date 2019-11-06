@@ -52,7 +52,7 @@ const LargeDeviceAboutMe = () =>{
       <AboutMeWrapper>
         <AboutMeHeading>About me</AboutMeHeading>
         <AboutMeText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. laborum.
+          Hi! My name is Suki, an aspiring web developer based in Melbourne, Australia. I build and design responsive and functioning web application. I'm finishing up my coding bootcamp soon and currently looking for an entry level web developer position to kickstart my career as a developer. If you want to work on an interesting project with me feel free to contact me and we can talk it over a cup of coffee <span role="img" aria-label="coffee">☕</span>.
         </AboutMeText>
         <AboutMeSVG src={require("../../images/about-me.svg")} alt="about-me"/>
       </AboutMeWrapper>
