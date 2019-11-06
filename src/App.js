@@ -6,6 +6,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import AboutMe from './components/AboutMe/AboutMe';
 function App() {
   return (
     <>
@@ -14,6 +15,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <HeroSection/>
+          </Route>
+          <Route path="/about-me" exact>
+            <AboutMe/>
           </Route>
         </Switch>
       </Router>
