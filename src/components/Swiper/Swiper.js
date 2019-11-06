@@ -17,7 +17,7 @@ const MySwiper = () =>{
   return(
     <>
       {(isBigScreen && !isDesktopOrLaptop && !isMobile) && <DesktopSwiper/>}
-      {(!isBigScreen && isDesktopOrLaptop && !isMobile) && <DesktopSwiper/>}
+      {(!isBigScreen && isDesktopOrLaptop && !isMobile) && <MobileSwiper/>}
       {(!isBigScreen && isDesktopOrLaptop && isMobile) && <MobileSwiper/>}
     </>
   )

@@ -4,6 +4,9 @@ import {useSpring, animated} from 'react-spring';
 
 const HeroSection = () => {
   const bodyAnimation = useSpring({
+    config:{
+      duration: 800
+    },
     from: {
       opacity: 0
     },
