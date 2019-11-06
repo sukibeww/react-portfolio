@@ -35,6 +35,11 @@ const DesktopNav = () => {
             </Link>
           </StyledLink>
           <StyledLink>
+            <Link to="/about-me">
+              <strong>About me</strong>
+            </Link>
+          </StyledLink>
+          <StyledLink>
             <Link to="/projects">
               <strong>Skills</strong>
             </Link>
