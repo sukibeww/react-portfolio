@@ -17,6 +17,9 @@ const AboutMe = () =>{
   )
 
   const bodyAnimation = useSpring({
+    config:{
+      duration: 800
+    },
     from: {
       opacity: 0
     },
