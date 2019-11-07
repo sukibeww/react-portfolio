@@ -7,6 +7,8 @@ import {
   Route
 } from "react-router-dom";
 import AboutMe from './components/AboutMe/AboutMe';
+import Projects from '/components/Projects/Projects'
+
 function App() {
   return (
     <>
@@ -18,6 +20,9 @@ function App() {
           </Route>
           <Route path="/about-me" exact>
             <AboutMe/>
+          </Route>
+          <Route path="/projects" exact>
+            <Projects/>
           </Route>
         </Switch>
       </Router>
