@@ -40,12 +40,12 @@ const UltrawideNav = () => {
           </StyledLink>
           <StyledLink>
             <Link to="/projects">
-              <strong>Skills</strong>
+              <strong>Projects</strong>
             </Link>
           </StyledLink>
           <StyledLink>
             <Link to="/skills">
-              <strong>Projects</strong>
+              <strong>Skills</strong>
             </Link>
           </StyledLink>
         </StyledLinks>
