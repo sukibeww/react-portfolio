@@ -46,7 +46,6 @@ const ProjectCard = (props) =>{
     borderRadius: "15px",
     position: "absolute",
     width: state.hovered ? "21vw": "16vw",
-    // height: state.clicked ? "75vh" : (state.hovered ? "32vh" : "20vh"),
     height: "auto",
     top: state.hovered ? "-5%" : "40%",
     right: "-5%",

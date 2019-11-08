@@ -1,7 +1,6 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import DesktopProjects from './DesktopProjects';
-import LargeDeviceProjects from './LargeDeviceProjects';
 import MobileProjects from './MobileProjects'
 
 
@@ -19,7 +18,7 @@ const Projects = () =>{
   return(
     <>
       {(isBigScreen && !isDesktopOrLaptop && !isMobile) && <DesktopProjects/>}
-      {(!isBigScreen && isDesktopOrLaptop && !isMobile) && <LargeDeviceProjects/>}
+      {(!isBigScreen && isDesktopOrLaptop && !isMobile) && <DesktopProjects/>}
       {(!isBigScreen && isDesktopOrLaptop && isMobile) && <MobileProjects/>}
     </>
   )
