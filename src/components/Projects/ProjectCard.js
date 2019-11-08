@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {useSpring, animated} from 'react-spring';
 
 const ProjectImage = styled.img`
-  z-index: 99;
+  z-index: 98;
   border-radius: 15px;
   object-fit: cover;
   width: 19vw;
@@ -47,7 +47,7 @@ const ProjectCard = (props) =>{
     position: "absolute",
     width: state.hovered ? "21vw": "16vw",
     height: "auto",
-    top: state.hovered ? "-5%" : "40%",
+    top: state.hovered ? "-3%" : "40%",
     right: "-5%",
     display: "flex",
     justifyContent: "flex-end",
@@ -71,12 +71,13 @@ const ProjectCard = (props) =>{
         marginTop: 0,
         paddingLeft: "1vw",
         paddingRight: "1vw",
-        overflowY: "hidden"
+        overflowY: "hidden",
+        textAlign: "justify"
       },
     )
 
   const ProjectCardWrapperAnimation = useSpring({
-    height: "25vh",
+    height: state.clicked ? "75vh" : "25vh",
     width: "19vw",
     display: "flex",
     flexDirection: "column",

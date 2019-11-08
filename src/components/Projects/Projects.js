@@ -2,6 +2,7 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import DesktopProjects from './DesktopProjects';
 import MobileProjects from './MobileProjects'
+import LargeDeviceProject from './LargeDeviceProjects';
 
 
 const Projects = () =>{
@@ -11,14 +12,17 @@ const Projects = () =>{
   const isDesktopOrLaptop = useMediaQuery(
     { maxWidth: 1600 }
   )
+  const isTablet = useMediaQuery(
+    { maxWidth: 1025 }
+  )
   const isMobile = useMediaQuery(
-    { maxWidth: 799 }
+    { maxWidth: 500 }
   )
 
   return(
     <>
       {(isBigScreen && !isDesktopOrLaptop && !isMobile) && <DesktopProjects/>}
-      {(!isBigScreen && isDesktopOrLaptop && !isMobile) && <DesktopProjects/>}
+      {(!isBigScreen && isTablet && !isMobile) && <LargeDeviceProject/>}
       {(!isBigScreen && isDesktopOrLaptop && isMobile) && <MobileProjects/>}
     </>
   )

@@ -19,11 +19,11 @@ const ProjectHeading = styled.h1`
     margin-bottom: 0;
 `
 
-const MobileProjectCard = (props) =>{
+const LargeDeviceProjectCard = (props) =>{
   const [state, changestate] = useState(false);
   const MobileCardWrapper = useSpring({
     height: "auto",
-    width: "80vw",
+    width: "60vw",
     borderRadius: "15px",
     display: "flex",
     justifyContent: "center",
@@ -80,4 +80,4 @@ const MobileProjectCard = (props) =>{
   )
 }
 
-export default MobileProjectCard;
+export default LargeDeviceProjectCard;
