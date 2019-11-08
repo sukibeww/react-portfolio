@@ -10,7 +10,8 @@ const ProjectGrid = styled.div`
   width: 70vw;
   grid-template-columns: 19vw 19vw 19vw;
   grid-column-gap: 5vw;
-  grid-auto-rows: 45vh;
+  grid-auto-rows: max-content;
+  grid-row-gap: 25vh;
 `
 
 const DesktopProjects = () =>{
@@ -18,6 +19,9 @@ const DesktopProjects = () =>{
   return(
     <>
       <ProjectGrid>
+        <ProjectCard projectName="My Portfolio" image={require("../../images/react-project.svg")}></ProjectCard>
+        <ProjectCard projectName="Home Grown Local" image={require("../../images/rails-project.svg")}></ProjectCard>
+        <ProjectCard projectName="Where is the ISS?" image={require("../../images/node-project.svg")}></ProjectCard>
         <ProjectCard projectName="My Portfolio" image={require("../../images/react-project.svg")}></ProjectCard>
         <ProjectCard projectName="Home Grown Local" image={require("../../images/rails-project.svg")}></ProjectCard>
         <ProjectCard projectName="Where is the ISS?" image={require("../../images/node-project.svg")}></ProjectCard>
