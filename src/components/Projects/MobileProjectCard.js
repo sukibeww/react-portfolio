@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const ProjectImage = styled.img`
   margin-top: 2vh;
-  height: 23vh;
+  width: 75vw;
   border-radius: 10px;
   align-self: center;
 `
