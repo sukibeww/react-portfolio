@@ -57,7 +57,6 @@ const LargeDeviceProjectCard = (props) =>{
       maxHeight: state ? "100vh" : "0vh",
       opacity: state ? 1 : 0,
       width: "auto",
-      zIndex: 99,
       margin: state ? "4vw" : "0vw",
       paddingLeft: "1vw",
       paddingRight: "1vw",

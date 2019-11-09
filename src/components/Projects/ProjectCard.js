@@ -67,7 +67,6 @@ const ProjectCard = (props) =>{
         maxHeight: state.clicked ? "100vh" : "0vh",
         opacity: state.clicked ? 1 : 0,
         width: "auto",
-        zIndex: 99,
         marginTop: 0,
         paddingLeft: "1vw",
         paddingRight: "1vw",
@@ -77,7 +76,7 @@ const ProjectCard = (props) =>{
     )
 
   const ProjectCardWrapperAnimation = useSpring({
-    height: state.clicked ? "75vh" : "25vh",
+    height: state.clicked ? "60vh" : "25vh",
     width: "19vw",
     display: "flex",
     flexDirection: "column",

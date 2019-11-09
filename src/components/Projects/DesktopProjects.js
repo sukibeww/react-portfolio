@@ -5,13 +5,14 @@ import ProjectCard from './ProjectCard';
 const ProjectGrid = styled.div`
   display: grid;
   margin-left: 15vw;
-  margin-top: 5vh;
+  margin-top: 10vh;
   margin-right: 15vw;
+  margin-bottom: 10vh;
   width: 70vw;
   grid-template-columns: 19vw 19vw 19vw;
   grid-column-gap: 5vw;
   grid-auto-rows: max-content;
-  grid-row-gap: 25vh;
+  grid-row-gap: 15vh;
 `
 
 const DesktopProjects = () =>{
