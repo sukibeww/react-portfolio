@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const FooterWrapper = styled.div`
   margin-top: 30vh;
   width: 100vw;
-  height: 50vh;
+  height: 40vh;
   background-image: url(${props => props.background});
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,7 +43,7 @@ const Footer = () => {
   const FooterNavigationWrapper = useSpring({
     display: "flex",
     flexDirection: "row",
-    paddingTop: "5vh",
+    paddingTop: "2vh",
     marginLeft: "20vw",
     marginRight: "20vw",
     justifyContent: "space-between",
@@ -52,7 +52,7 @@ const Footer = () => {
 
   return(
     <>
-      <FooterWrapper background={require("../../images/footer.svg")}>
+      <FooterWrapper background={require("../../images/footer2.svg")}>
         <animated.div style={FooterNavigationWrapper}>
           <SocialMediaLinkWrapper>
             <SocialMediaLink src={require("../../images/github.svg")}></SocialMediaLink>
