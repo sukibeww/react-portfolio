@@ -4,7 +4,7 @@ import {useSpring, animated} from 'react-spring';
 import {Link} from 'react-router-dom';
 
 const FooterWrapper = styled.div`
-  margin-top: 30vh;
+  margin-top: 10vh;
   width: 100vw;
   height: 35vh;
   background-image: url(${props => props.background});
