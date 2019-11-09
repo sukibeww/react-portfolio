@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 
 const FooterWrapper = styled.div`
-  margin-top: 20vh;
+  margin-top: 10vh;
   width: 100vw;
   height: 27vh;
   background-image: url(${props => props.background});
