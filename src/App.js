@@ -9,6 +9,7 @@ import {
 import AboutMe from './components/AboutMe/AboutMe';
 import Projects from './components/Projects/Projects';
 import Footer from './components/Footer/Footer';
+import Contacts from './components/Contacts/Contacts';
 
 function App() {
   return (
