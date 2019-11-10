@@ -50,6 +50,27 @@ const NavigationLink = styled.h1`
   }
 `
 
+const BottomSection = styled.div`
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: row;
+
+`
+
+const BottomText = styled.p`
+  font-family: "Nunito",sans-serif;
+  font-size: 0.7em;
+  color: #FFFFFF;
+  opacity: 0.5;
+  margin-right: 2vw;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: right;
+`
+
 const MobileFooter = () => {
 
   return(
@@ -77,6 +98,11 @@ const MobileFooter = () => {
             <NavigationLink>Contact</NavigationLink>
           </Link>
         </FooterNavigationWrapper>
+        <BottomSection>
+          <BottomText>
+            © 2019 Sukianto Suteja.<br/>All rights resevered.
+          </BottomText>
+        </BottomSection>
       </FooterWrapper>
     </>
   )

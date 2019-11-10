@@ -39,6 +39,26 @@ const NavigationLink = styled.h1`
   }
 `
 
+const BottomSection = styled.div`
+  width: 100vw;
+  height: 9vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: row;
+
+`
+
+const BottomText = styled.p`
+  font-family: "Nunito",sans-serif;
+  font-size: 1.3em;
+  color: #FFFFFF;
+  opacity: 0.5;
+  margin-right: 2vw;
+  margin-bottom: 0;
+  text-align: right;
+`
+
 const DesktopFooter = () => {
   const FooterNavigationWrapper = useSpring({
     display: "flex",
@@ -75,7 +95,14 @@ const DesktopFooter = () => {
             <NavigationLink>Contact</NavigationLink>
           </Link>
         </animated.div>
+        <BottomSection>
+          <BottomText>
+            Made with love and coffee <span role="img" aria-label="coffee">☕</span> <br/>
+            © 2019 Sukianto Suteja. All rights resevered.
+          </BottomText>
+        </BottomSection>
       </FooterWrapper>
+      
     </>
   )
 }
