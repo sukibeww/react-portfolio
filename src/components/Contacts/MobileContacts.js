@@ -5,7 +5,7 @@ import useForm from 'react-hook-form';
 import { useAlert } from 'react-alert';
 
 const FormWrapper = styled.div`
-  height: 80vh;
+  height: 600px;
   width: 100vw;
   margin-top: 10vh;
   margin-bottom: 10vh;
@@ -86,15 +86,6 @@ const SubmitButton = styled.button`
 `
 
 const MobileContacts = () => {
-  if(/Android 4\.[0-3]/.test(navigator.appVersion)){
-    window.addEventListener("resize", function(){
-      if(document.activeElement.tagName==="INPUT"){
-          window.setTimeout(function(){
-            document.activeElement.scrollIntoViewIfNeeded();
-          },0);
-      }
-    })
-  }
   const alert = useAlert();
   const { handleSubmit, register, errors} = useForm();
   const onSubmit = (values, e) => {
