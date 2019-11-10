@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import useForm from 'react-hook-form';
+import { useAlert } from 'react-alert'
 
 const FormWrapper = styled.div`
   height: 80vh;
@@ -101,12 +102,14 @@ const SubmitButton = styled.button`
 `
 
 const DesktopContacts = () => {
+  const alert = useAlert();
   const { handleSubmit, register, errors} = useForm();
   const onSubmit = (values, e) => {
     axios.post( "https://formcarry.com/s/3bnv7dMgoif", values, {headers: {"Accept": "application/json"}})
     .then(function (response) {
       console.log(response);
       e.target.reset();
+      alert.success("E-mail sent, Thank you for contacting me! 🙂")
     })
     .catch(function (error) {
       console.log(error);
