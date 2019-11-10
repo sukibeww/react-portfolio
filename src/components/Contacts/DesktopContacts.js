@@ -74,7 +74,7 @@ const FormHeader = styled.h1`
 const MessageInput = styled.textarea`
   height: 18vh;
   width: 50%;
-  border-radius: 50px;
+  border-radius: 20px;
   border: none;
   font-family: "Nunito", sans-serif;
   font-size: 1em;

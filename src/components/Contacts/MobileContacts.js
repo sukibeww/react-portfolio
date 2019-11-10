@@ -41,7 +41,7 @@ const FormHeader = styled.h1`
 const TextInput = styled.input`
   height: 6vh;
   width: 70%;
-  border-radius: 50px;
+  border-radius: 20px;
   border: none;
   font-family: "Nunito", sans-serif;
   font-size: 1.3em;
