@@ -55,8 +55,12 @@ const DesktopFooter = () => {
       <FooterWrapper background={require("../../images/footer.svg")}>
         <animated.div style={FooterNavigationWrapper}>
           <SocialMediaLinkWrapper>
-            <SocialMediaLink src={require("../../images/github.svg")}></SocialMediaLink>
-            <SocialMediaLink src={require("../../images/linkedin.svg")}></SocialMediaLink>
+            <a href="https://github.com/sukibeww">
+              <SocialMediaLink src={require("../../images/github.svg")}></SocialMediaLink>
+            </a>
+            <a href="https://www.linkedin.com/in/sukianto-suteja-85b379154/">
+              <SocialMediaLink src={require("../../images/linkedin.svg")}></SocialMediaLink>
+            </a>
           </SocialMediaLinkWrapper>
           <Link style={{textDecoration: "none"}} to="/">
             <NavigationLink>Home</NavigationLink>
@@ -67,7 +71,7 @@ const DesktopFooter = () => {
           <Link style={{textDecoration: "none"}} to="/projects">
             <NavigationLink>Projects</NavigationLink>
           </Link>
-          <Link style={{textDecoration: "none"}} to="/contact">
+          <Link style={{textDecoration: "none"}} to="/contacts">
             <NavigationLink>Contact</NavigationLink>
           </Link>
         </animated.div>

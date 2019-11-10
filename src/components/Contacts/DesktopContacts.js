@@ -117,8 +117,21 @@ const DesktopContacts = () => {
     <>
       <FormWrapper>
         <LinkWrapper>
-          <SocialMediaLink src={require("../../images/github.svg")}></SocialMediaLink>
-          <SocialMediaLink src={require("../../images/linkedin.svg")}></SocialMediaLink>
+          <a style={{
+            marginLeft: "5%",
+            marginRight: "5%",
+          }}
+          href="https://github.com/sukibeww">
+            <SocialMediaLink src={require("../../images/github.svg")}></SocialMediaLink>
+          </a>
+          <a
+          style={{
+            marginLeft: "5%",
+            marginRight: "5%",
+          }}
+          href="https://www.linkedin.com/in/sukianto-suteja-85b379154/">
+            <SocialMediaLink src={require("../../images/linkedin.svg")}></SocialMediaLink>
+          </a>
         </LinkWrapper>
         <InputWrapper onSubmit={handleSubmit(onSubmit)} >
           <FormHeader>Contact me</FormHeader>
