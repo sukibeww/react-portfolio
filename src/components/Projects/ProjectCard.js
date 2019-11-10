@@ -10,11 +10,8 @@ const ProjectImage = styled.img`
 `
 
 const ProjectCard = (props) =>{
-  const [state, changestate] = useState({
-    hovered: false,
-    clicked: false
-  });
-
+  const [hovered, toggleHovered] = useState(false);
+  const [clicked, toggleClicked] = useState(false);
   const CallToAction = useSpring({
     fontSize: "1em",
     fontFamily: "Nunito, sans-serif",
@@ -23,7 +20,7 @@ const ProjectCard = (props) =>{
     width: "inherit",
     textAlign: "right",
     marginRight: "2vw",
-    display: state.clicked ? "none" : "block"
+    display: clicked ? "none" : "block"
   })
 
   const ProjectTitle = useSpring({
@@ -34,7 +31,7 @@ const ProjectCard = (props) =>{
     marginRight: "2vw",
     marginTop: 0,
     marginBottom: "0",
-    height: state.hovered ? "32vh" : "20vh",
+    height: hovered ? "32vh" : "20vh",
     display: "flex",
     justifyContent: "flex-end",
     alignItems: "flex-end"
@@ -45,9 +42,9 @@ const ProjectCard = (props) =>{
     backgroundColor: "#373737",
     borderRadius: "15px",
     position: "absolute",
-    width: state.hovered ? "21vw": "16vw",
+    width: hovered ? "21vw": "16vw",
     height: "auto",
-    top: state.hovered ? "-3%" : "40%",
+    top: hovered ? "-3%" : "40%",
     right: "-5%",
     display: "flex",
     justifyContent: "flex-end",
@@ -64,8 +61,8 @@ const ProjectCard = (props) =>{
         color: "#FFFFFF",
         backgroundColor:"#373737",
         fontSize: "1em",
-        maxHeight: state.clicked ? "100vh" : "0vh",
-        opacity: state.clicked ? 1 : 0,
+        maxHeight: clicked ? "100vh" : "0vh",
+        opacity: clicked ? 1 : 0,
         width: "auto",
         marginTop: 0,
         paddingLeft: "1vw",
@@ -76,7 +73,7 @@ const ProjectCard = (props) =>{
     )
 
   const ProjectCardWrapperAnimation = useSpring({
-    height: state.clicked ? "60vh" : "25vh",
+    height: clicked ? "60vh" : "25vh",
     width: "19vw",
     display: "flex",
     flexDirection: "column",
@@ -89,23 +86,15 @@ const ProjectCard = (props) =>{
       <animated.div
       style={ProjectCardWrapperAnimation}
       onMouseEnter={() => {
-        changestate({
-          hovered: true
-        })
+        toggleHovered(true);
       }}
-      onMouseLeave={() =>{
-        changestate({
-          hovered: false,
-          clicked: false
-        })
+      onMouseLeave={() => {
+        if(!clicked){
+          toggleHovered(false);
+        }
       }}
       onClick={(e) =>{
-        changestate((prevState) => {
-          return {
-            hovered: true,
-            clicked: !prevState.clicked
-          }
-        })
+        toggleClicked((prevState) => !prevState);
       }}
       >
         <ProjectImage src={props.image} alt={props.projectName}></ProjectImage>
