@@ -57,7 +57,6 @@ const MobileProjectCard = (props) =>{
       maxHeight: state ? "100vh" : "0vh",
       opacity: state ? 1 : 0,
       width: "auto",
-      zIndex: 1,
       margin: state ? "4vw" : "0vw",
       paddingLeft: "1vw",
       paddingRight: "1vw",
@@ -68,7 +67,7 @@ const MobileProjectCard = (props) =>{
 
   return(
     <>
-      <animated.div style={MobileCardWrapper} onTouchStart={() => changestate((prevState) => !prevState)}>
+      <animated.div style={MobileCardWrapper} onTouchEnd={() => changestate((prevState) => !prevState)}>
         <ProjectImage src={props.image}></ProjectImage>
         <ProjectHeading>{props.projectName}</ProjectHeading>
         <animated.h3 style={CallToAction}>Click for details</animated.h3>
