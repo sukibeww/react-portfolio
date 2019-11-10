@@ -25,6 +25,9 @@ function App() {
           <Route path="/projects" exact>
             <Projects/>
           </Route>
+          <Route path="/contacts" exact>
+            <Contacts/>
+          </Route>
         </Switch>
         <Footer></Footer>
       </Router>
