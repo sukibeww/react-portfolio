@@ -79,8 +79,8 @@ const MobileNav = () => {
         <Link to="/projects" style={{textDecoration: "none"}}>
           <animated.div style={navOptionAnimation} onClick={()=>toggle(!navMode)}><strong>Projects</strong></animated.div>
         </Link>
-        <Link to="/skills" style={{textDecoration: "none"}}>
-          <animated.div style={navOptionAnimation} onClick={()=>toggle(!navMode)}><strong>Skills</strong></animated.div>
+        <Link to="/contacts" style={{textDecoration: "none"}}>
+          <animated.div style={navOptionAnimation} onClick={()=>toggle(!navMode)}><strong>Contacts</strong></animated.div>
         </Link>
       </animated.div>
     </>
