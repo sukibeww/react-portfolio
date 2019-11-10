@@ -7,7 +7,7 @@ const ProjectGrid = styled.div`
   margin-left: 15vw;
   margin-top: 10vh;
   margin-right: 15vw;
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
   width: 70vw;
   grid-template-columns: 19vw 19vw 19vw;
   grid-column-gap: 5vw;
