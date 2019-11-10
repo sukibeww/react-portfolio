@@ -67,7 +67,7 @@ const LargeDeviceProjectCard = (props) =>{
 
   return(
     <>
-      <animated.div style={MobileCardWrapper} onTouchStart={() => changestate((prevState) => !prevState)}>
+      <animated.div style={MobileCardWrapper} onTouchEnd={() => {changestate((prevState) => !prevState)}}>
         <ProjectImage src={props.image}></ProjectImage>
         <ProjectHeading>{props.projectName}</ProjectHeading>
         <animated.h3 style={CallToAction}>Click for details</animated.h3>
