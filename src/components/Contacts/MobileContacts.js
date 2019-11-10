@@ -86,6 +86,15 @@ const SubmitButton = styled.button`
 `
 
 const MobileContacts = () => {
+  if(/Android 4\.[0-3]/.test(navigator.appVersion)){
+    window.addEventListener("resize", function(){
+      if(document.activeElement.tagName==="INPUT"){
+          window.setTimeout(function(){
+            document.activeElement.scrollIntoViewIfNeeded();
+          },0);
+      }
+    })
+  }
   const alert = useAlert();
   const { handleSubmit, register, errors} = useForm();
   const onSubmit = (values, e) => {
