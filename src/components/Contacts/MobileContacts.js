@@ -39,7 +39,7 @@ const FormHeader = styled.h1`
 `
 
 const TextInput = styled.input`
-  height: 6vh;
+  height: 35px;
   width: 70%;
   border-radius: 20px;
   border: none;
@@ -54,9 +54,9 @@ const TextInput = styled.input`
 
 
 const MessageInput = styled.textarea`
-  height: 18vh;
+  height: 160px;
   width: 66vw;
-  border-radius: 50px;
+  border-radius: 20px;
   border: none;
   font-family: "Nunito", sans-serif;
   font-size: 1em;
@@ -70,7 +70,7 @@ const MessageInput = styled.textarea`
 `
 
 const SubmitButton = styled.button`
-  height: 6vh;
+  height: 40px;
   width: 40%;
   border-radius: 50px;
   border: none;
