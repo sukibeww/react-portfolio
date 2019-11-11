@@ -41,8 +41,7 @@ const LargeDeviceProjectCard = (props) =>{
     marginTop: 0,
     marginBottom: "1vh",
     marginRight: "7vw",
-    alignSelf: "flex-end",
-    display: state ? "none" : "block"
+    alignSelf: "flex-end"
   })
 
   const ProjectDetailAnimation = useSpring(
@@ -67,13 +66,13 @@ const LargeDeviceProjectCard = (props) =>{
 
   return(
     <>
-      <animated.div style={MobileCardWrapper} onTouchEnd={() => {changestate((prevState) => !prevState)}}>
+      <animated.div style={MobileCardWrapper}>
         <ProjectImage src={props.image}></ProjectImage>
         <ProjectHeading>{props.projectName}</ProjectHeading>
-        <animated.h3 style={CallToAction}>Click for details</animated.h3>
         <animated.p style={ProjectDetailAnimation}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim elit nisi, ut dictum dolor cursus in. Morbi eu mi est. Integer egestas sem a turpis euismod, ut maximus eros auctor. Aenean sed sodales ipsum. Ut pretium dictum orci, ac malesuada ipsum condimentum at. Morbi bibendum magna sed dignissim volutpat. Praesent sed ipsum tristique, interdum augue id, ornare nibh. Duis dapibus tristique augue sit amet scelerisque. Etiam turpis turpis, fringilla eu tempor at, malesuada ut mi. Praesent pellentesque ac orci vitae malesuada.
         </animated.p>
+  <animated.h3 style={CallToAction} onTouchEnd={() => {changestate((prevState) => !prevState)}}>{state ? "Collapse" : "Expand"}</animated.h3>
       </animated.div>
     </>
   )
