@@ -31,6 +31,11 @@ const AboutMeSVG = styled.img`
 const Emphasize = styled.span`
   color: #5F3AFF;
 `
+const EmphasizeLink = styled.a`
+  color: #5F3AFF;
+  text-decoration: underline;
+`
+
 
 const AboutMeHeading = styled.h1`
   width: 50vw;
@@ -56,7 +61,7 @@ const DesktopAboutMe = () =>{
       <AboutMeWrapper>
         <AboutMeHeading>About me</AboutMeHeading>
         <AboutMeText>
-          Hi! My name is <Emphasize>Suki</Emphasize>, a web developer based in <Emphasize>Melbourne, Australia</Emphasize>. I build and design responsive and functioning web application. I'm finishing up my coding bootcamp soon and currently looking for a <Emphasize>web developer</Emphasize> position to kickstart my career as a developer. If you have an interesting project and want to collaborate with me feel free to <Emphasize>contact me</Emphasize> and we can talk it over a cup of coffee <span role="img" aria-label="coffee">☕</span>.
+          Hi! My name is <Emphasize>Suki</Emphasize>, a web developer based in <Emphasize>Melbourne, Australia</Emphasize>. I build and design responsive and functioning web application. I'm finishing up my coding bootcamp soon and currently looking for a <Emphasize>web developer</Emphasize> position to kickstart my career as a developer. If you have an interesting project and want to collaborate with me feel free to <EmphasizeLink href="/contacts">contact me</EmphasizeLink> and we can talk it over a cup of coffee <span role="img" aria-label="coffee">☕</span>.
         </AboutMeText>
         <AboutMeSVG src={require("../../images/about-me.svg")} alt="about-me"/>
       </AboutMeWrapper>

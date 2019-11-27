@@ -23,7 +23,10 @@ const DesktopSwiper = () => {
       type: 'bullets',
       clickable: true
     },
-    spaceBetween: 0
+    spaceBetween: 0,
+    autoplay: {
+      delay: 4000,
+    },
   }
   return(
     <>
