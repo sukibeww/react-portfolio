@@ -13,7 +13,7 @@ const AboutMe = () =>{
     { maxWidth: 1600 }
   )
   const isMobile = useMediaQuery(
-    { maxWidth: 799 }
+    { maxWidth: 767 }
   )
 
   const bodyAnimation = useSpring({

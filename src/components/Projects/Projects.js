@@ -13,7 +13,7 @@ const Projects = () =>{
     { maxWidth: 1600 }
   )
   const isTablet = useMediaQuery(
-    { maxWidth: 1025 }
+    { maxWidth: 800 }
   )
   const isMobile = useMediaQuery(
     { maxWidth: 500 }

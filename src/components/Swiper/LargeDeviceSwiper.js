@@ -2,32 +2,34 @@ import React from 'react';
 import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
 
-const SectionContainer = styled.div`
+const MobileSectionContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
-  height: 60vh;
+  height: 90vh;
   object-fit: cover;
   display: flex;
+  margin-top: 2vh;
   justify-content:center;
   align-items: center;
-  padding: 5vw;
 `
 
 const SwiperWrapper = styled.div`
   width: 100vw;
 `
 
-const DesktopSwiper = () => {
+const SwiperImage = styled.img`
+  width: 65vw;
+`
+
+
+const LargeDeviceSwiper = () =>{
   const params = {
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
     },
-    spaceBetween: 0,
-    autoplay: {
-      delay: 4000,
-    },
+    spaceBetween: 0
   }
   return(
     <>
@@ -36,20 +38,20 @@ const DesktopSwiper = () => {
       <SwiperWrapper>
         <Swiper {...params}>
           <div>
-            <SectionContainer>
-              <img src={require("../../images/swiperlanding.svg")} alt="landing"></img>
-            </SectionContainer>
+            <MobileSectionContainer>
+              <SwiperImage src={require("../../images/mobile-landing.svg")} alt="landing"></SwiperImage>
+            </MobileSectionContainer>
           </div>
           <div>
-            <SectionContainer>
-              <img src={require("../../images/mobile-friendly-light.svg")} alt="mobile-landing" ></img>
-            </SectionContainer>
+            <MobileSectionContainer>
+              <SwiperImage src={require("../../images/mobile-friendly-for-mobile.svg")} alt="landing"></SwiperImage>
+            </MobileSectionContainer>
           </div>
           <div>
             <a href="https://github.com/sukibeww">
-              <SectionContainer>
-                <img src={require("../../images/github-desktop.svg")} alt="github-landing"></img>
-              </SectionContainer>
+              <MobileSectionContainer>
+                <SwiperImage src={require("../../images/github-for-mobile.svg")} alt="landing"></SwiperImage>
+              </MobileSectionContainer>
             </a>
           </div>
         </Swiper>
@@ -58,4 +60,4 @@ const DesktopSwiper = () => {
   )
 }
 
-export default DesktopSwiper;
+export default LargeDeviceSwiper;

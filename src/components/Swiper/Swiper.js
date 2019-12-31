@@ -2,6 +2,7 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive'
 import DesktopSwiper from './DesktopSwiper';
 import MobileSwiper from './MobileSwiper';
+import LargeDeviceSwiper from './LargeDeviceSwiper'
 
 const MySwiper = () =>{
   const isBigScreen = useMediaQuery(
@@ -11,14 +12,13 @@ const MySwiper = () =>{
     { maxWidth: 1600 }
   )
   const isMobile = useMediaQuery(
-    { maxWidth: 799 }
+    { maxWidth: 767 }
   )
-
   return(
     <>
-      {(isBigScreen && !isDesktopOrLaptop && !isMobile) && <DesktopSwiper/>}
-      {(!isBigScreen && isDesktopOrLaptop && !isMobile) && <MobileSwiper/>}
-      {(!isBigScreen && isDesktopOrLaptop && isMobile) && <MobileSwiper/>}
+      {(isBigScreen && !isDesktopOrLaptop && !isMobile) ? <DesktopSwiper/> : null}
+      {(!isBigScreen && isDesktopOrLaptop && !isMobile) ? <LargeDeviceSwiper/> : null}
+      {(!isBigScreen && isDesktopOrLaptop && isMobile) ? <MobileSwiper/> : null}
     </>
   )
 }
