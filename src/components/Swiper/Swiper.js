@@ -10,14 +10,17 @@ const MySwiper = () =>{
   const isDesktopOrLaptop = useMediaQuery(
     { maxWidth: 1600 }
   )
-  const isMobile = useMediaQuery(
-    { maxWidth: 799 }
+  const isTablet = useMediaQuery(
+    { maxWidth: 800 }
   )
-
+  const isMobile = useMediaQuery(
+    { maxWidth: 500 }
+  )
+  console.log({isBigScreen, isDesktopOrLaptop, isTablet, isMobile})
   return(
     <>
       {(isBigScreen && !isDesktopOrLaptop && !isMobile) && <DesktopSwiper/>}
-      {(!isBigScreen && isDesktopOrLaptop && !isMobile) && <MobileSwiper/>}
+      {(!isBigScreen && isDesktopOrLaptop && !isMobile) && <DesktopSwiper/>}
       {(!isBigScreen && isDesktopOrLaptop && isMobile) && <MobileSwiper/>}
     </>
   )

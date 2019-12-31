@@ -20,11 +20,8 @@ const DesktopProjects = () =>{
   return(
     <>
       <ProjectGrid>
-        <ProjectCard projectName="My Portfolio" image={require("../../images/react-project.svg")}></ProjectCard>
-        <ProjectCard projectName="Home Grown Local" image={require("../../images/rails-project.svg")}></ProjectCard>
-        <ProjectCard projectName="Where is the ISS?" image={require("../../images/node-project.svg")}></ProjectCard>
-        <ProjectCard projectName="My Portfolio" image={require("../../images/react-project.svg")}></ProjectCard>
-        <ProjectCard projectName="Home Grown Local" image={require("../../images/rails-project.svg")}></ProjectCard>
+        <ProjectCard projectName="My Portfolio" image={require("../../images/react-project.svg")} description={"This website that you"}></ProjectCard>
+        <ProjectCard projectName="My Reading list" image={require("../../images/graphql-project.svg")}></ProjectCard>
         <ProjectCard projectName="Where is the ISS?" image={require("../../images/node-project.svg")}></ProjectCard>
       </ProjectGrid>
     </>

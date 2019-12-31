@@ -5,11 +5,12 @@ import Swiper from 'react-id-swiper';
 const SectionContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
-  height: 80vh;
+  height: 60vh;
   object-fit: cover;
   display: flex;
   justify-content:center;
   align-items: center;
+  padding: 5vw;
 `
 
 const SwiperWrapper = styled.div`
