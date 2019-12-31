@@ -1,5 +1,4 @@
-<svg width="713" height="712" viewBox="0 0 713 712" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line y1="84" x2="713" y2="84" stroke="#373737" stroke-width="10"/>
-<line x1="605" y1="711.993" x2="606" y2="0.992956" stroke="#5F3AFF" stroke-width="10"/>
-<path d="M650.2 461.927C650.2 461.927 536.116 614.932 508.177 504.191C480.239 393.449 328.676 562.881 328.676 562.881" stroke="#5F3AFF" stroke-width="10"/>
+<svg width="361" height="712" viewBox="0 0 361 712" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="295.999" y1="711.993" x2="296.999" y2="0.992956" stroke="#5F3AFF" stroke-width="10"/>
+<path d="M341.2 461.927C341.2 461.927 227.116 614.932 199.177 504.191C171.239 393.449 19.6763 562.881 19.6763 562.881" stroke="#5F3AFF" stroke-width="10"/>
 </svg>

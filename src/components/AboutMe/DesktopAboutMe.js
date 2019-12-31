@@ -28,6 +28,10 @@ const AboutMeSVG = styled.img`
   align-self: flex-start;
 `
 
+const Splitter = styled.img`
+  width: 40vw;
+`
+
 const Emphasize = styled.span`
   color: #5F3AFF;
 `
@@ -60,6 +64,7 @@ const DesktopAboutMe = () =>{
     <>
       <AboutMeWrapper>
         <AboutMeHeading>About me</AboutMeHeading>
+        <Splitter src={require("../../images/about-me-splitter.svg")}></Splitter>
         <AboutMeText>
           Hi! My name is <Emphasize>Suki</Emphasize>, a web developer based in <Emphasize>Melbourne, Australia</Emphasize>. I build and design responsive and functioning web application. I'm finishing up my coding bootcamp soon and currently looking for a <Emphasize>web developer</Emphasize> position to kickstart my career as a developer. If you have an interesting project and want to collaborate with me feel free to <EmphasizeLink href="/contacts">contact me</EmphasizeLink> and we can talk it over a cup of coffee <span role="img" aria-label="coffee">☕</span>.
         </AboutMeText>
