@@ -12,18 +12,15 @@ const Projects = () =>{
   const isDesktopOrLaptop = useMediaQuery(
     { maxWidth: 1600 }
   )
-  const isTablet = useMediaQuery(
-    { maxWidth: 800 }
-  )
   const isMobile = useMediaQuery(
-    { maxWidth: 500 }
+    { maxWidth: 767 }
   )
 
   return(
     <>
-      {(isBigScreen && !isDesktopOrLaptop && !isMobile) && <DesktopProjects/>}
-      {(!isBigScreen && isTablet && !isMobile) && <LargeDeviceProject/>}
-      {(!isBigScreen && isDesktopOrLaptop && isMobile) && <MobileProjects/>}
+      {(isBigScreen && !isDesktopOrLaptop && !isMobile) ? <DesktopProjects/> : null}
+      {(!isBigScreen && isDesktopOrLaptop && !isMobile) ? <LargeDeviceProject/> : null}
+      {(!isBigScreen && isDesktopOrLaptop && isMobile) ? <MobileProjects/> : null}
     </>
   )
 }
