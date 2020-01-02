@@ -44,7 +44,7 @@ const TextInput = styled.input`
   border-radius: 50px;
   border: none;
   font-family: "Nunito", sans-serif;
-  font-size: 1em;
+  font-size: 0.7em;
   padding-left: 2vw;
   padding-right: 2vw;
   font-weight: 700;
@@ -78,7 +78,7 @@ const MessageInput = styled.textarea`
   border-radius: 20px;
   border: none;
   font-family: "Nunito", sans-serif;
-  font-size: 1em;
+  font-size: 0.7em;
   padding: 2vw;
   font-weight: 700;
   margin-bottom: 1vh;
