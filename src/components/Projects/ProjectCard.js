@@ -73,12 +73,13 @@ const ProjectCard = (props) =>{
     )
 
   const ProjectCardWrapperAnimation = useSpring({
-    height: clicked ? "60vh" : "25vh",
+    paddingTop: "1vh",
+    height: clicked ? "40vh   " : "25vh",
     width: "19vw",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    position: "relative"
+    position: "relative",
   })
 
   return(
@@ -102,7 +103,7 @@ const ProjectCard = (props) =>{
           <animated.h1 style={ProjectTitle}>{props.projectName}</animated.h1>
           <animated.h3 style={CallToAction}>Click for details</animated.h3>
           <animated.p style={ProjectDetailAnimation}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim elit nisi, ut dictum dolor cursus in. Morbi eu mi est. Integer egestas sem a turpis euismod, ut maximus eros auctor. Aenean sed sodales ipsum. Ut pretium dictum orci, ac malesuada ipsum condimentum at. Morbi bibendum magna sed dignissim volutpat. Praesent sed ipsum tristique, interdum augue id, ornare nibh. Duis dapibus tristique augue sit amet scelerisque. Etiam turpis turpis, fringilla eu tempor at, malesuada ut mi. Praesent pellentesque ac orci vitae malesuada.
+            {props.details}
           </animated.p>
         </animated.div>
       </animated.div>
