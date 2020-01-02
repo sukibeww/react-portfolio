@@ -40,13 +40,13 @@ const FormHeader = styled.h1`
 
 const TextInput = styled.input`
   height: 35px;
-  width: 70%;
+  width: 66vw;
   border-radius: 20px;
   border: none;
   font-family: "Nunito", sans-serif;
-  font-size: 1.3em;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  font-size: 1em;
+  padding-left: 3vh;
+  padding-right: 3vh;
   font-weight: 700;
   margin-bottom: 2vh;
   color: #505050;
