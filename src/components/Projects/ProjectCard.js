@@ -9,6 +9,22 @@ const ProjectImage = styled.img`
   width: 19vw;
 `
 
+const SocialMediaLinkWrapper = styled.div`
+  overflow: visible;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`
+
+const SocialMediaLink = styled.img`
+  width: 1.5vw;
+  height: 1.5vw;
+  opacity: 0.5;
+  &:hover{
+    opacity: 1;
+  }
+`
+
 const ProjectCard = (props) =>{
   const [hovered, toggleHovered] = useState(false);
   const [clicked, toggleClicked] = useState(false);
@@ -104,7 +120,14 @@ const ProjectCard = (props) =>{
           <animated.h3 style={CallToAction}>Click for details</animated.h3>
           <animated.p style={ProjectDetailAnimation}>
             {props.details}
+            <SocialMediaLinkWrapper>
+              <a
+              href={props.link}>
+                <SocialMediaLink src={require("../../images/github.svg")}></SocialMediaLink>
+              </a>
+            </SocialMediaLinkWrapper>
           </animated.p>
+          
         </animated.div>
       </animated.div>
     </>
