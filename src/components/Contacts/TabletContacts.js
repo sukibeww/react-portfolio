@@ -53,8 +53,8 @@ const TextInput = styled.input`
 `
 
 const SocialMediaLink = styled.img`
-  width: 7vw;
-  height: 7vw;
+  width: 4vw;
+  height: 4vw;
   margin-left: 5%;
   margin-right: 5%;
   opacity: 0.5;

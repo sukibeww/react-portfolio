@@ -28,8 +28,8 @@ const SocialMediaLinkWrapper = styled.div`
 `
 
 const SocialMediaLink = styled.img`
-  width: 5vh;
-  height: 5vh;
+  width: 4vw;
+  height: 4vw;
   margin-top: 2vh;
   opacity: 0.5;
   &:hover{
