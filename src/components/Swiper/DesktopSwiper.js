@@ -5,7 +5,6 @@ import Swiper from 'react-id-swiper';
 const SectionContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
-  height: 60vh;
   object-fit: cover;
   display: flex;
   justify-content:center;
@@ -14,7 +13,8 @@ const SectionContainer = styled.div`
 `
 
 const SwiperWrapper = styled.div`
-  width: 100vw;
+  padding: 0 15vw;
+  width: 70vw;
 `
 
 const DesktopSwiper = () => {

@@ -138,7 +138,7 @@ const TabletContacts = () => {
         <InputWrapper onSubmit={handleSubmit(onSubmit)} >
           <FormHeader>Contact me</FormHeader>
           <TextInput
-            placeholder="Your_email@gmail.com"
+            placeholder={errors.email ? "Invalid e-mail address 😅" : "Your_email@gmail.com"}   
             type="email"
             name="email"
             ref={register({
@@ -151,30 +151,27 @@ const TabletContacts = () => {
               }
             })}>
           </TextInput>
-          {errors.email && errors.email.message}
 
           <TextInput
             type="text"
             name="name"
-            placeholder="Your name here"
+            placeholder={errors.message ?"Invalid messages 😅" : "Your name here"}
             ref={register({
               require: 'Required',
               maxlength: 35,
               minLength: 4,
             })}>
           </TextInput>
-          {errors.name && "Invalid name 😅"}
 
           <MessageInput
             type="text"
             name="message"
-            placeholder="Your message here..."
+            placeholder={errors.message ?"Invalid messages 😅" :"Your message here..."}
             ref={register({
               require: 'Required',
               minLength: 5
             })}>
           </MessageInput>
-          {errors.name && "Invalid messages 😅"}
 
           <SubmitButton type="submit">Send</SubmitButton>
         </InputWrapper>

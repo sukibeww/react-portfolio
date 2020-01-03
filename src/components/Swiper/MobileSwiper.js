@@ -3,21 +3,19 @@ import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
 
 const MobileSectionContainer = styled.div`
-  background-image: url(${require("../../images/mobile-landing.svg")});
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 90vh;
-  object-fit: cover;
   display: flex;
-  margin-top: 2vh;
   justify-content:center;
   align-items: center;
+`
+
+const SwiperImage = styled.img`
+  width: 70vw;
+  min-height: 90vh;
 `
 
 const SwiperWrapper = styled.div`
   width: 100vw;
 `
-
 
 const MobileSwiper = () =>{
   const params = {
@@ -26,7 +24,10 @@ const MobileSwiper = () =>{
       type: 'bullets',
       clickable: true
     },
-    spaceBetween: 0
+    spaceBetween: 0,
+    autoplay: {
+      delay: 4000,
+    },
   }
   return(
     <>
@@ -34,23 +35,17 @@ const MobileSwiper = () =>{
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"></link>
       <SwiperWrapper>
         <Swiper {...params}>
-          <div>
+          <MobileSectionContainer>
+            <SwiperImage src={require("../../images/mobile-landing.svg")} alt="landing"></SwiperImage>
+          </MobileSectionContainer>
+          <MobileSectionContainer>
+            <SwiperImage src={require("../../images/mobile-friendly-for-mobile.svg")} alt="landing"></SwiperImage>
+          </MobileSectionContainer>
+          <a href="https://github.com/sukibeww">
             <MobileSectionContainer>
-              <img src={require("../../images/mobile-landing.svg")} alt="landing"></img>
+              <SwiperImage src={require("../../images/github-for-mobile.svg")} alt="landing"></SwiperImage>
             </MobileSectionContainer>
-          </div>
-          <div>
-            <MobileSectionContainer>
-              <img src={require("../../images/mobile-friendly-for-mobile.svg")} alt="landing"></img>
-            </MobileSectionContainer>
-          </div>
-          <div>
-            <a href="https://github.com/sukibeww">
-              <MobileSectionContainer>
-                <img src={require("../../images/github-for-mobile.svg")} alt="landing"></img>
-              </MobileSectionContainer>
-            </a>
-          </div>
+          </a>
         </Swiper>
       </SwiperWrapper>
     </>
