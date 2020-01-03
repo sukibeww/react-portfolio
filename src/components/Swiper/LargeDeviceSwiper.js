@@ -3,12 +3,7 @@ import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
 
 const MobileSectionContainer = styled.div`
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 90vh;
-  object-fit: cover;
   display: flex;
-  margin-top: 2vh;
   justify-content:center;
   align-items: center;
 `
@@ -18,7 +13,8 @@ const SwiperWrapper = styled.div`
 `
 
 const SwiperImage = styled.img`
-  width: 65vw;
+  width: 50vw;
+  min-height: 75vh;
 `
 
 
@@ -29,7 +25,10 @@ const LargeDeviceSwiper = () =>{
       type: 'bullets',
       clickable: true
     },
-    spaceBetween: 0
+    spaceBetween: 0,
+    autoplay: {
+      delay: 4000,
+    },
   }
   return(
     <>
