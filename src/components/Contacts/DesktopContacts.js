@@ -44,7 +44,7 @@ const TextInput = styled.input`
   border-radius: 50px;
   border: none;
   font-family: "Nunito", sans-serif;
-  font-size: 1.3em;
+  font-size: 1em;
   padding-left: 2vw;
   padding-right: 2vw;
   font-weight: 700;
@@ -92,7 +92,7 @@ const SubmitButton = styled.button`
   border-radius: 50px;
   border: none;
   font-family: "Nunito", sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-left: 2vw;
   padding-right: 2vw;
   font-weight: 700;

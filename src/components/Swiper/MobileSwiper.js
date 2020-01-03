@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
 
 const MobileSectionContainer = styled.div`
-  background-image: url(${require("../../images/mobile-landing.svg")});
   background-repeat: no-repeat;
   background-position: center;
   height: 90vh;
