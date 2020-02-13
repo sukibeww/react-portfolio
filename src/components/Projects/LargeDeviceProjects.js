@@ -19,6 +19,12 @@ const LargeDeviceProjects = () =>{
     <>
       <ProjectGrid>
         <LargeDeviceProjectCard 
+        projectName="Code:Block" 
+        image={require("../../images/gatsby-project.svg")}
+        details={"This is a passion project of mine, I want to create a personal blog to document my journey and experience in web development world. So I created Code:Block. A personal blog that I actively maintain and develop"}
+        link="https://github.com/sukibeww/code-block"
+        ></LargeDeviceProjectCard>
+        <LargeDeviceProjectCard 
         projectName="AirCamper Fire Ban" 
         image={require("../../images/graphql-project.svg")}
         details={"This application aims to provide a formatted information (JSON) regarding Fire ban in Australia provided by the government of every states for mobile application called AirCamper."}
