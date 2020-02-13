@@ -40,13 +40,13 @@ const FormHeader = styled.h1`
 
 const TextInput = styled.input`
   height: 35px;
-  width: 70%;
+  width: 66vw;
   border-radius: 20px;
   border: none;
   font-family: "Nunito", sans-serif;
-  font-size: 1.3em;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  font-size: 1em;
+  padding-left: 3vh;
+  padding-right: 3vh;
   font-weight: 700;
   margin-bottom: 2vh;
   color: #505050;
@@ -105,7 +105,7 @@ const MobileContacts = () => {
       <InputWrapper onSubmit={handleSubmit(onSubmit)} >
         <FormHeader>Contact me</FormHeader>
         <TextInput
-          placeholder="Your_email@gmail.com"
+          placeholder={errors.email ? "Invalid e-mail address 😅" : "Your_email@gmail.com"} 
           type="email"
           name="email"
           ref={register({
@@ -118,30 +118,27 @@ const MobileContacts = () => {
             }
           })}>
         </TextInput>
-        {errors.email && errors.email.message}
 
         <TextInput
           type="text"
           name="name"
-          placeholder="Your name here"
+          placeholder={errors.message ?"Invalid messages 😅" : "Your name here"}
           ref={register({
             require: 'Required',
             maxlength: 35,
             minLength: 4,
           })}>
         </TextInput>
-        {errors.name && "Invalid name 😅"}
 
         <MessageInput
           type="text"
           name="message"
-          placeholder="Your message here..."
+          placeholder={errors.message ?"Invalid messages 😅" :"Your message here..."}
           ref={register({
             require: 'Required',
             minLength: 5
           })}>
         </MessageInput>
-        {errors.name && "Invalid messages 😅"}
 
         <SubmitButton type="submit">Send</SubmitButton>
       </InputWrapper>
