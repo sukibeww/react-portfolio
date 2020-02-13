@@ -19,7 +19,7 @@ const StyledLink = styled.li`
   }
   a{
     text-decoration: none;
-    color: #373737;
+    color: #FFFFFF;
   }
 `
 

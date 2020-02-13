@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import DesktopContacts from './DesktopContacts';
 import TabletContacts from './TabletContacts';
 import MobileContacts from './MobileContacts';
+import {useSpring , animated} from 'react-spring';
 
 const Footer = () => {
   const isBigScreen = useMediaQuery(
@@ -18,12 +19,27 @@ const Footer = () => {
     { maxWidth: 500 }
   )
 
+  const bodyAnimation = useSpring({
+    config:{
+      duration: 800
+    },
+    from: {
+      opacity: 0
+    },
+    to: {
+      opacity: 1
+    }
+  })
+
 
   return(
     <>
-      {(isBigScreen && !isDesktopOrLaptop && !isMobile) && <DesktopContacts/>}
-      {(!isBigScreen && isTablet && !isMobile) && <TabletContacts/>}
-      {(!isBigScreen && isDesktopOrLaptop && isMobile) && <MobileContacts/>}
+      <animated.div style={bodyAnimation}>
+        {(isBigScreen && !isDesktopOrLaptop && !isMobile) && <DesktopContacts/>}
+        {(!isBigScreen && isTablet && !isMobile) && <TabletContacts/>}
+        {(!isBigScreen && isDesktopOrLaptop && isMobile) && <MobileContacts/>}
+      </animated.div>
+      
     </>
   )
 }
