@@ -14,7 +14,9 @@ const MobileWrapper = styled.div`
   align-items: center;
   width: 84vw;
   height: 5vh;
-  background-color: #FFFFFF;
+  border-bottom-left-radius: 10px; 
+  border-bottom-right-radius: 10px;
+  background-color: #3F3D56;
   -webkit-box-shadow:  0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   -moz-box-shadow:  0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   box-shadow:  0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -60,7 +62,7 @@ const MobileNav = () => {
             width: "3rem"
           }}></img>
         </Link>
-        <img src={require("../../images/burger.svg")} alt="burgermenu" style={{
+        <img src={require("../../images/burger-light.svg")} alt="burgermenu" style={{
           height: "2rem",
           width: "2rem",
           cursor: "pointer"
