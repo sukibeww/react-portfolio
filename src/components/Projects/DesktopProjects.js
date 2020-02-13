@@ -21,6 +21,12 @@ const DesktopProjects = () =>{
   return(
     <>
       <ProjectGrid>
+      <ProjectCard 
+        projectName="Code:Block" 
+        image={require("../../images/gatsby-project.svg")}
+        details={"This is a passion project of mine, I want to create a personal blog to document my journey and experience in web development world. So I created Code:Block. A personal blog that I actively maintain and develop"}
+        link="https://github.com/sukibeww/code-block"
+        ></ProjectCard>
         <ProjectCard 
         projectName="AirCamper Fire Ban" 
         image={require("../../images/graphql-project.svg")}

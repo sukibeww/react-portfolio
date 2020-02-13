@@ -15,9 +15,9 @@ const MobileWrapper = styled.div`
   width: 84vw;
   height: 5vh;
   background-color: #FFFFFF;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
-  -moz-box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
-  box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
+  -webkit-box-shadow:  0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -moz-box-shadow:  0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow:  0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 `
 
 const MobileNav = () => {

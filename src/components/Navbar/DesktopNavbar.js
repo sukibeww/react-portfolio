@@ -5,7 +5,7 @@ import StyledLinks from './StyledLinks';
 import {Link} from 'react-router-dom'
 
 const DesktopWrapper = styled.div`
-  padding: 3vh 10vw;
+  padding: 1vh 10vw;
   width: 80vw;
   display: flex;
   flex-direction: row;
@@ -13,9 +13,9 @@ const DesktopWrapper = styled.div`
   height: 8vh;
   background-color: #FFFFFF;
   margin-bottom: 1vh;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
-  -moz-box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
-  box-shadow: 0px 3px 5px 0px rgba(168,156,255,1);
+  -webkit-box-shadow:  0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -moz-box-shadow:  0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow:  0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 `
 
 
