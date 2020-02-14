@@ -10,12 +10,12 @@ const StyledLink = styled.li`
   &:hover{
     transition: all 0.5s;
     color: #3000FF;
-    -webkit-box-shadow: 0px 2px 0px 0px rgba(95,58,255,1);
-    -moz-box-shadow: 0px 2px 0px 0px rgba(95,58,255,1);
-    box-shadow: 0px 2px 0px 0px rgba(95,58,255,1);
+    -webkit-box-shadow: 0px 2px 0px 0px #5f3aff;
+    -moz-box-shadow: 0px 2px 0px 0px #5f3aff;
+    box-shadow: 0px 2px 0px 0px #5f3aff;
   }
   &:active{
-    color: rgba(95,58,255,1);
+    color: #5f3aff;
   }
   a{
     text-decoration: none;
