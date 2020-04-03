@@ -5,7 +5,7 @@ import StyledLinks from './StyledLinks';
 import {Link} from 'react-router-dom';
 
 const UltrawideWrapper = styled.div`
-  padding: 1vh 0vw;
+  padding: 3vh 0vw;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -25,8 +25,7 @@ const LinkText = styled.h1`
 `
 
 const NavWrapper = styled.div`
-  width: 80%; 
-  margin: 0 10vw;
+  width: 100%;
 `
 
 const UltrawideNav = () => {
